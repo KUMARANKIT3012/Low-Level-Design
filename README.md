@@ -49,3 +49,8 @@ g++ encapsulation.cpp -o encapsulation
 ## Author
 
 Ankit Kumar
+
+## Connect
+
+- LinkedIn: https://www.linkedin.com/in/ankitkumarsist/
+- Portfolio: https://personal-portfolio-orpin-iota.vercel.app/
