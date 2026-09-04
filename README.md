@@ -12,6 +12,8 @@ This repository contains beginner-friendly C++ examples to understand core Objec
 
 - **Abstraction**: Hiding internal implementation details and exposing only essential operations.
 - **Encapsulation**: Binding data and behavior together while controlling access to internal state.
+- **Inheritance**: Reusing and extending a base class through derived classes.
+- **Polymorphism**: Supporting multiple implementations through compile-time overloading and runtime method overriding.
 
 ## Complete LLD Topic Roadmap
 
@@ -21,8 +23,8 @@ This repository is planned as a complete LLD learning path from fundamentals to 
 
 - [x] Encapsulation
 - [x] Abstraction
-- [ ] Inheritance
-- [ ] Polymorphism (compile-time and runtime)
+- [x] Inheritance
+- [x] Polymorphism (compile-time and runtime)
 - [ ] Interfaces and abstract classes in depth
 
 ### 2. Object Relationships
@@ -70,6 +72,14 @@ This repository is planned as a complete LLD learning path from fundamentals to 
 - `encapsulation.cpp`
   - Demonstrates encapsulation with private data members in `SportsCar`.
   - Exposes controlled access via public methods (`getcurrentspeed`, `getTyre`, `setTyre`) and behavior methods.
+- `inheritance.cpp`
+  - Demonstrates public inheritance with `SportsCar` extending the `Car` base class.
+  - Shows inherited behavior, inherited getters, and sports-car-specific behavior and state.
+- `polymorphism/dynamic.cpp`
+  - Demonstrates runtime polymorphism with virtual `startEngine()` methods.
+  - Uses a `Car*` pointer to call different implementations for `SportsCar` and `ElectricCar`.
+- `polymorphism/static.cpp`
+  - Demonstrates compile-time polymorphism through overloaded methods.
 
 ## How to Compile and Run
 
@@ -89,21 +99,42 @@ g++ encapsulation.cpp -o encapsulation
 ./encapsulation
 ```
 
+### 3. Inheritance Example
+
+```bash
+g++ inheritance.cpp -o inheritance
+./inheritance
+```
+
+### 4. Runtime Polymorphism Example
+
+```bash
+g++ polymorphism/dynamic.cpp -o dynamic
+./dynamic
+```
+
+### 5. Compile-Time Polymorphism Example
+
+```bash
+g++ polymorphism/static.cpp -o static
+./static
+```
+
 ## Learning Notes
 
 - Abstraction is helpful when you want to define a common contract and allow multiple implementations.
 - Encapsulation protects object state and prevents uncontrolled updates from outside the class.
-- Together, they are foundational for scalable and maintainable LLD.
+- Inheritance supports reuse, while polymorphism allows code to work with a common interface and vary the implementation.
+- Together, these OOP principles are foundational for scalable and maintainable LLD.
 
 ## Coverage Status
 
-- Completed topics: 2
+- Completed topics: 4
 - Planned topics: OOP + SOLID + Design Patterns + LLD case studies
-- Current phase: Fundamentals
+- Current phase: OOP fundamentals
 
 ## Suggested Next Steps
 
-- Add `inheritance.cpp` and `polymorphism.cpp`.
 - Add one complete mini case study (Parking Lot or Library Management).
 - Add a simple `Makefile` for one-command build and run.
 
